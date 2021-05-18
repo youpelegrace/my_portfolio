@@ -1,0 +1,360 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+html,
+body {
+  font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  background-color: #a83e51;
+  color: #f1f1f1;
+  font-weight: 300;
+}
+
+nav.navbar > ul.nav-resources {
+  margin: 0;
+  padding: 0;
+  -webkit-padding-start: 0;
+  list-style: none;
+}
+
+nav.navbar > ul.nav-resources > li {
+  height: 30px;
+}
+
+nav.navbar > ul.nav-resources > li > a {
+  text-decoration: none;
+  color: #f1f1f1;
+  font-size: 0.9rem;
+  padding: 0 10px;
+}
+
+nav.navbar > ul.nav-resources > li > a:hover,
+nav.navbar > ul.nav-resources > li > a:focus {
+  background-color: #f1f1f1;
+  color: #212121;
+  transition: background-color 200ms linear, color 200ms linear;
+}
+
+@media screen and (min-width: 768px) {
+  nav.navbar > ul.nav-resources {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 100px;
+  }
+
+  nav.navbar > ul.nav-resources > li {
+    display: inline-flex;
+    justify-content: space-around;
+    height: 50px;
+    line-height: 50px;
+    font-weight: 400;
+  }
+
+  nav.navbar > ul.nav-resources > li > a {
+    font-size: 1.1rem;
+  }
+}
+
+button {
+  background-color: #212121;
+  color: #ffffff;
+  height: 35px;
+  border: none;
+  width: 150px;
+  font-weight: 600;
+  border-radius: 5px;
+  font-size: 0.9rem;
+
+  cursor: pointer;
+}
+
+section {
+  margin: 20px 0;
+}
+
+section > span.title {
+  font-size: 0.9rem;
+  display: block;
+}
+
+@media screen and (min-width: 768px) {
+  button {
+    height: 50px;
+  }
+
+  section {
+    margin: 50px 0;
+  }
+
+  section > span.title {
+    font-size: 1.1rem;
+    font-weight: 400;
+    display: block;
+  }
+}
+
+section#home {
+  padding: 0 20px;
+}
+
+section#home > img.animoji {
+  display: inline-block;
+  margin: 0 auto;
+  width: 100%;
+}
+
+section#home > div > span.title {
+  font-size: 0.9rem;
+  font-weight: 600;
+  display: block;
+}
+
+section#home > div.main > p.description {
+  font-size: 0.9rem;
+}
+
+@media screen and (min-width: 768px) {
+  section#home {
+    display: grid;
+    grid-template-areas: '. animoji about .';
+    grid-template-columns: minmax(auto, 50px) auto auto minmax(auto, 50px);
+    grid-template-rows: auto;
+    padding: 0;
+    height: 60vh;
+  }
+
+  section#home > div.animoji {
+    grid-area: animoji;
+    display: grid;
+    align-content: center;
+  }
+
+  section#home > div.animoji > img.animoji {
+    height: 300px;
+    height: 300px;
+    display: inline-block;
+  }
+
+  section#home > div.main {
+    grid-area: about;
+    display: grid;
+    align-content: center;
+  }
+
+  section#home > div > span.title {
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+
+  section#home > div.main > p.description {
+    font-size: 1.2rem;
+  }
+}
+
+section#about {
+  padding: 0 20px;
+}
+
+section#about > img.profile-picture {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin: 10px 0;
+}
+
+section#about > span.profile-name {
+  font-size: 0.9rem;
+  font-weight: 600;
+  line-height: 50px;
+}
+
+section#about > p.profile-description {
+  font-size: 0.8rem;
+  font-weight: 300;
+  line-height: 25px;
+}
+
+@media screen and (min-width: 768px) {
+  section#about {
+    background-color: #212121;
+    padding: 20px 0;
+    display: grid;
+    grid-template-areas:
+      '. sectiontitle sectiontitle . .'
+      '. profilename . profilepicture .'
+      '. profiledescription . profilepicture .'
+      '. profileaction  . profilepicture .';
+    grid-template-rows: 50px auto auto auto;
+    grid-template-columns: minmax(auto, 50px) auto 50px auto minmax(auto, 50px);
+  }
+
+  section#about > span.title {
+    grid-area: sectiontitle;
+    font-size: 1.5rem;
+  }
+
+  section#about > img.profile-picture {
+    grid-area: profilepicture;
+    width: 300px;
+    height: auto;
+    border-radius: 20px;
+    margin: 10px 0;
+  }
+
+  section#about > span.profile-name {
+    grid-area: profilename;
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 30px;
+  }
+
+  section#about > p.profile-description {
+    grid-area: profiledescription;
+    font-size: 0.9rem;
+    font-weight: 300;
+    line-height: 25px;
+  }
+
+  section#about > button.button {
+    grid-area: profileaction;
+    background-color: #a83e51;
+  }
+}
+
+section#skills {
+  padding: 0 20px;
+}
+
+section#skills > div.content > div.skill-card > span.skill-card-title {
+  line-height: 30px;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+section#skills > div.content > div.skill-card > p.skill-card-description {
+  font-size: 0.8rem;
+  line-height: 25px;
+}
+
+@media screen and (min-width: 768px) {
+  section#skills {
+    padding: 0;
+    display: grid;
+    grid-template-areas:
+      '. skilltitle .'
+      '. skillcontent .';
+    grid-template-columns: minmax(auto, 50px) auto minmax(auto, 50px);
+    grid-template-rows: 50px auto;
+  }
+
+  section#skills > span.title {
+    grid-area: skilltitle;
+    font-size: 1.5rem;
+  }
+
+  section#skills > div.content {
+    grid-area: skillcontent;
+  }
+
+  section#skills > div.content > div.skill-card {
+    display: inline-block;
+    width: 350px;
+  }
+
+  section#skills > div.content > div.skill-card > span.skill-card-title {
+    line-height: 30px;
+    font-weight: 600;
+    font-size: 1.2rem;
+  }
+
+  section#skills > div.content > div.skill-card > p.skill-card-description {
+    font-size: 0.9rem;
+    line-height: 30px;
+  }
+}
+
+footer#contact {
+  padding: 50px 20px;
+  background-color: #212121;
+}
+
+footer#contact > span.title {
+  font-size: 1.1rem;
+  line-height: 50px;
+  font-weight: 600;
+}
+
+footer#contact > ul.resources {
+  margin: 0;
+  padding: 0;
+  -webkit-padding-start: 0;
+  list-style: none;
+}
+
+footer#contact > ul.resources > li {
+  height: 35px;
+}
+
+footer#contact > ul.resources > li > span.value {
+  font-size: 0.9rem;
+}
+
+footer#contact > ul.resources > li > span.value > a {
+  color: #f1f1f1;
+  text-decoration: none;
+}
+
+@media screen and (min-width: 768px) {
+  footer#contact {
+    padding: 50px 50px;
+  }
+
+  footer#contact > span.title {
+    font-size: 1.1rem;
+    line-height: 50px;
+    font-weight: 400;
+  }
+}
+
+span.icon {
+  display: inline-block;
+  vertical-align: middle;
+  min-width: 30px;
+  min-height: 30px;
+  background-size: 20px;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+span.icon.location {
+  background-image: url('../assets/icons/location.svg');
+}
+
+span.icon.phone {
+  background-image: url('../assets/icons/phone.svg');
+}
+
+span.icon.envelope {
+  background-image: url('../assets/icons/envelope.svg');
+}
+
+span.icon.linkedin {
+  background-image: url('../assets/icons/linkedin.svg');
+}
+
+span.icon.github {
+  background-image: url('../assets/icons/github.svg');
+}
+
+span.icon.twitter {
+  background-image: url('../assets/icons/twitter.svg');
+}
+
+span.icon.pencil-ruler {
+  background-image: url('../assets/icons/pencil-ruler.svg');
+}
+
+span.icon.wrench-pencil {
+  background-image: url('../assets/icons/wrench-pencil.svg');
+}
