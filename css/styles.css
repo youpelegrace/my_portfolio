@@ -65,8 +65,13 @@ button {
   font-weight: 600;
   border-radius: 5px;
   font-size: 0.9rem;
-
+  text-decoration: none;
   cursor: pointer;
+}
+
+button a{
+  text-decoration: none;
+  color: #ffffff;
 }
 
 section {
@@ -102,6 +107,11 @@ section#home > img.animoji {
   display: inline-block;
   margin: 0 auto;
   width: 100%;
+  cursor: url("assets/img/pic1.png"), auto;
+}
+
+section#home > img.animoji:hover {
+  transform: scale(1.1);
 }
 
 section#home > div > span.title {
@@ -219,6 +229,7 @@ section#about > p.profile-description {
   section#about > button.button {
     grid-area: profileaction;
     background-color: #a83e51;
+    text-decoration: none;
   }
 }
 
